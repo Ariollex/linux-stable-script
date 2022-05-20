@@ -239,7 +239,7 @@ function update_to_target_version() {
             if ! git cherry-pick "${RANGE}"; then
                 die "Cherry-pick needs manual intervention! Resolve conflicts then run:
 
-git add . && git cherry-pick --continue"
+git add . && git commit && git cherry-pick --continue"
             else
                 header "${TARGET_VERSION} PICKED CLEANLY!" "${GRN}"
             fi ;;
